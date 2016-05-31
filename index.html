@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Telegram Bots - Tech Retro (Jun 1, 2016)</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -22,10 +22,114 @@
 		</script>
 	</head>
 	<body>
+
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>Telegram Bots</h1>
+					<h4>some subtitle here, idk</h4>
+					<span>
+						<small>Tech Retro - Jun 1, 2016</small>
+						<br>
+						<small><a href="https://github.com/raphaeltanyw">@raphaeltanyw</a></small>
+					</span>
+				</section>
+
+				<section>
+					<section>
+						<h3>Pretty sure you know what they are.</h3>
+						<img data-src="images/bgp_helper_eg.png">
+						<br>
+						<img data-src="images/fire.gif">
+					</section>
+
+					<section>
+						<h3>Essentially...</h3>
+						Programmatically receive and/or send messages through the Telegram messaging service
+					</section>
+
+					<section>
+						<h3>But how do you create one?</h3>
+						<img data-src="images/bot_api_page.png"></img>
+						<small>
+							<a href="https://core.telegram.org/bots/api">https://core.telegram.org/bots/api</a>
+						</small>
+					</section>
+
+					<section>
+						<h3>Or just use an API wrapper!</h3>
+						<p>Ruby: <a href="https://github.com/atipugin/telegram-bot-ruby">telegram-bot-ruby</a></p>
+						<p>Scala: <a href="https://github.com/mukel/telegrambot4s">telegrambot4s</a></p>
+						<p>Python: <a href="https://github.com/python-telegram-bot/python-telegram-bot">python-telegram-bot</a></p>
+						<small class="fragment">...and many others, just google it.</small>
+					</section>
+
+					<section>
+						<h3>In ruby</h3>
+						<pre><code>require 'telegram/bot'
+token = 'YOUR_TELEGRAM_BOT_API_TOKEN'
+Telegram::Bot::Client.run(token) do |bot|
+  bot.listen do |message|
+    case message.text
+    when '/start'
+      bot.api.send_message(
+        chat_id: message.chat.id,
+        text: "Hello, #{message.from.first_name}"
+      )
+    when '/stop'
+      bot.api.send_message(
+        chat_id: message.chat.id,
+        text: "Bye, #{message.from.first_name}"
+      )
+    end
+  end
+end
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h3>Bots in GDS and ACE (BGP)</h3>
+				</section>
+				<section>
+					<section>
+						<h3>BGP Helper</h3>
+						<p>Problem:</p>
+						<ul>
+							<li>Devs focus on tasks</li>
+							<li>Rarely look at the build status</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>BGP Helper</h3>
+						<ul>
+							<li>Devs want to know if:</li>
+							<ul>
+								<li>Build is passing before merging</li>
+								<li>Their code breaks the build</li>
+							</ul>
+							<li>Telegram to communicate with PPO/UX/QA/other devs</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>BGP Helper</h3>
+						<p>Alerts when the RoR CI build:</p>
+						<ul>
+							<li>First fails</li>
+							<li>Passes again</li>
+						</ul>
+						<p>Easier to troubleshoot if detected ASAP</p>
+					</section>
+
+					<section>
+						<img data-src="images/ci_fix.png">
+					</section>
+				</section>
+				<section>
+					<
+				</section>
 			</div>
 		</div>
 

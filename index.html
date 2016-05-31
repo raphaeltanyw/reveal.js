@@ -37,19 +37,18 @@
 
 				<section>
 					<section>
-						<h3>Pretty sure you know what they are.</h3>
+						Pretty sure you know what they are.
 						<img data-src="images/bgp_helper_eg.png">
 						<br>
 						<img data-src="images/fire.gif">
 					</section>
 
 					<section>
-						<h3>Essentially...</h3>
 						Programmatically receive and/or send messages through the Telegram messaging service
 					</section>
 
 					<section>
-						<h3>But how do you create one?</h3>
+						But how do you create one?
 						<img data-src="images/bot_api_page.png"></img>
 						<small>
 							<a href="https://core.telegram.org/bots/api">https://core.telegram.org/bots/api</a>
@@ -57,7 +56,9 @@
 					</section>
 
 					<section>
-						<h3>Or just use an API wrapper!</h3>
+						Or just use an API wrapper!
+						<br>
+						<br>
 						<p>Ruby: <a href="https://github.com/atipugin/telegram-bot-ruby">telegram-bot-ruby</a></p>
 						<p>Scala: <a href="https://github.com/mukel/telegrambot4s">telegrambot4s</a></p>
 						<p>Python: <a href="https://github.com/python-telegram-bot/python-telegram-bot">python-telegram-bot</a></p>
@@ -65,7 +66,7 @@
 					</section>
 
 					<section>
-						<h3>In ruby</h3>
+						In Ruby
 						<pre><code>require 'telegram/bot'
 token = 'YOUR_TELEGRAM_BOT_API_TOKEN'
 Telegram::Bot::Client.run(token) do |bot|
@@ -94,15 +95,20 @@ end
 				<section>
 					<section>
 						<h3>BGP Helper</h3>
+						<small>Non-interactive bot (@BGP_Helper)</small>
+						<br>
+						<small><a href="https://github.com/raphaeltanyw/bamboo_notifications">Github Page</a></small>
+					</section>
+					<section>
 						<p>Problem:</p>
 						<ul>
 							<li>Devs focus on tasks</li>
 							<li>Rarely look at the build status</li>
 						</ul>
+						<img data-src="images/this_is_fine.jpg">
 					</section>
 
 					<section>
-						<h3>BGP Helper</h3>
 						<ul>
 							<li>Devs want to know if:</li>
 							<ul>
@@ -114,7 +120,6 @@ end
 					</section>
 
 					<section>
-						<h3>BGP Helper</h3>
 						<p>Alerts when the RoR CI build:</p>
 						<ul>
 							<li>First fails</li>
@@ -127,8 +132,156 @@ end
 						<img data-src="images/ci_fix.png">
 					</section>
 				</section>
+
 				<section>
-					<
+					<section>
+						<h3>GeeksDontSlack</h3>
+						<small>Interactive bot (@GDS_Bot)</small>
+						<br>
+						<small><a href="https://github.com/raphaeltanyw/gds-telegram-bot-lite">Github Page</a></small>
+					</section>
+
+					<section>
+						Fountains of quotable phrases.
+						<blockquote class="fragment">
+							&ldquo;Pull request is like playing chess, it does not guarantee a happy ending the more you check, but it does make you feel better&rdquo;
+						</blockquote>
+						<i class="fragment">-- Yew Lee</i>
+					</section>
+
+					<section>
+						<h3>Random quotes</h3>
+						Light humour
+						<p><small>(Hope it doesn't offend anyone)</small></p>
+						<ul>
+							<li><mark>/qotd</mark>: Dev-related quotes</li>
+							<img data-src="images/dev_quotes.png">
+							<li><mark>/qotd_gds</mark>: Quotes from GDS members</li>
+							<img data-src="images/qotd_gds.png">
+							<li><mark>/50_nerds</mark>: Tweets from <i><a href="https://twitter.com/50nerdsofgrey">@50NerdsofGrey</a></i></li>
+							<img data-src="images/50nerds.png">
+						</ul>
+					</section>
+
+					<section>
+						<h3>Hashtag Count</h3>
+						Counts the number of people who respond with a hashtag
+						<img data-src="images/hashtag_count.png">
+					</section>
+
+					<section>
+						<h3>Chapter list</h3>
+						<img data-src="images/chapter_list.png">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Other bots in GDS</h3>
+					</section>
+					<section>
+						<h3>BGP Attendance Bot</h3>
+						<img data-src="images/attendance-bot.png">
+						by <a href="https://github.com/strengthandwill">Kah Kong</a> (<a href="https://github.com/strengthandwill/telegram-attendance-bot">Github Page</a>)
+					</section>
+					<section>
+						<h3>Ari-chan</h3>
+						<img data-src="images/ari-chan.png">
+						by Roger
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>The Ugly</h3>
+					</section>
+
+					<section>
+						<h3>Lack of standardization</h3>
+						<ul>
+							<li>E.g. <i>/start</i> command is rarely implemented</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Privacy modes</h3>
+						<ul>
+							<li>Enabled:</li>
+							<ul>
+								<li>Commands</li>
+								<li>Replies</li>
+								<li>Service messages</li>
+							</ul>
+							<br>
+							<li>Disabled:</li>
+							<ul><li><i>ALL</i> messages</li></ul>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Privacy modes</h3>
+						<img data-src="images/privacy_conflict.png">
+						Multiple bots = Messy
+					</section>
+
+					<section>
+						<h3>Privacy modes</h3>
+						<img data-src="images/privacy_check.png">
+						<p>Beware when inviting third party bots</p>
+					</section>
+
+					<section>
+						<h3>Random errors</h3>
+						<img data-src="images/409_error.png">
+						<img data-src="images/502_error.png">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Conclusion</h3>
+					</section>
+
+					<section>
+						<h3>(IMHO) Good for</h3>
+						<ul>
+							<li>Simple input, quick feedback</li>
+							<li>Short, periodic notifications</li>
+							<li>May have some exceptions...</li>
+						</ul>
+					</section>
+
+					<section>
+						<img data-src="images/meme_bot.png">
+					</section>
+
+					<section>
+						<p>Can someone create a bot that does this one thing?</p>
+						<div class="fragment"><h1 class="fragment strike">NO</h1></div>
+						<p class="fragment">Well, maybe...</p>
+					</section>
+
+					<section>
+						<p>Think about: </p>
+						<ul>
+							<li>Usability/Interaction (<i>Mostly</i> text-based)</li>
+								<ul>
+									<li>Too complex?</li>
+								</ul>
+							<li>Coherence (Does another bot do a similar thing?)</li>
+								<ul>
+									<li>More bots = More noise</li>
+								</ul>
+						</ul>
+					</section>
+
+					<section>
+						<p>So, can someone add this feature to this bot?</p>
+						<p class="fragment">
+							Submit a pull request!
+							<br>
+							It's not hard, really.
+						</p>
+					</section>
 				</section>
 			</div>
 		</div>
